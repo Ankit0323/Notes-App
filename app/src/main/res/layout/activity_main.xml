@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:id="@+id/inputText"
+        android:layout_height="wrap_content"
+        android:hint="enter name"
+        android:layout_marginBottom="10dp"
+
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="create"
+            android:layout_marginRight="5dp"
+            android:visibility="visible"
+            android:onClick="create"
+            android:backgroundTint="@color/green"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="update"
+            android:visibility="gone"
+            android:onClick="update"
+            android:backgroundTint="@color/blue"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:visibility="gone"
+            android:onClick="delete"
+            android:backgroundTint="@color/red"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item"
+        />
+
+
+
+</LinearLayout>
